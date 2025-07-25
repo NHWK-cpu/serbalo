@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login</title>
+  <title>Register</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
@@ -21,15 +21,16 @@
   @enderror
   <div class="w-screen h-screen flex items-center justify-center">
     <div class="w-md max-lg:w-sm py-15 px-10 bg-white space-y-5 rounded-xl border-2 border-black shadow-[4px_4px_0_0_#000]">
-      <h1 class="text-center text-xl font-bold font-poppins">Login Akun</h1>
+      <h1 class="text-center text-xl font-bold font-poppins">Daftar Akun Baru</h1>
 
-      <form action="login" class="space-y-5" method="POST">
+      <form action="register" class="space-y-5" method="POST">
         @csrf
+        <input type="text" name="name" id="name" placeholder="name" class="px-3 py-2 w-full shadow-[inset_2px_2px_5px_#bebebe,_inset_-2px_-2px_5px_#fff] rounded-sm focus:outline-0" required>
         <input type="text" name="username" id="username" placeholder="username" class="px-3 py-2 w-full shadow-[inset_2px_2px_5px_#bebebe,_inset_-2px_-2px_5px_#fff] rounded-sm focus:outline-0" required>
         <input type="password" name="password" id="password" placeholder="password" class="px-3 py-2 w-full shadow-[inset_2px_2px_5px_#bebebe,_inset_-2px_-2px_5px_#fff] rounded-sm focus:outline-0" required>
-        <button type="submit" class="w-full py-2 bg-[#5000A6] text-white rounded-sm border-2 border-black shadow-[4px_4px_0_0_#000] transition-all hover:bg-[#a271bf] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">Login</button>
+        <button type="submit" class="w-full py-2 bg-[#5000A6] text-white rounded-sm border-2 border-black shadow-[4px_4px_0_0_#000] transition-all hover:bg-[#a271bf] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">Register</button>
       </form>
-      <p class="font-poppins">Belum punya akun? <a href="/register" class="font-semibold italic">Buat Sekarang</a></p>
+      <p class="font-poppins">Sudah punya akun? <a href="/login" class="font-semibold italic">Login Akun</a></p>
     </div>
   </div>
 </body>

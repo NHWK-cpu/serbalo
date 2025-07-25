@@ -16,6 +16,9 @@
 </head>
 
 <body>
+  @if (session('message'))
+    <script>alert("{{ session('message') }}")</script>
+  @endif
   <x-shop-layout>
     <div class="my-5 flex w-screen flex-col items-center gap-5">
 
@@ -54,7 +57,7 @@
       </div>
 
       {{-- Recomendation product --}}
-      <main class="w-screen bg-white p-10">
+      <main class="w-screen min-h-50 bg-white p-10">
         <div class="w-7xl flex flex-col items-start gap-3 m-auto">
           <h2
             class="font-poppins w-full border-b-2 border-slate-300 text-xl font-semibold">

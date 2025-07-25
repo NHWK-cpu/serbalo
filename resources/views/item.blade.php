@@ -25,7 +25,7 @@
         <div class="w-[30%]">
           <div
             class="w-full aspect-square overflow-hidden rounded-lg bg-white border-2 border-black shadow-[8px_8px_0_0_#000]">
-            <img class="h-full object-cover object-center"
+            <img class="h-full object-cover"
               src="{{ asset($product_selected['image_url']) }}">
           </div>
         </div>
@@ -40,6 +40,8 @@
             <h3 class="font-sans text-3xl font-bold ">
               Rp. {{ number_format($product_selected['price'], 0, ',', '.') }}
             </h3>
+
+            <p class="text-lg font-poppins">Sisa stok: <span class="font-semibold">{{ $product_selected['stock'] }}</span></p>
 
             <span class="border-b-2">Detail</span>
             <p>{{ $product_selected['description'] }}</p>

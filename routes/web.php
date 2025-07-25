@@ -18,3 +18,7 @@ Route::get('/item/{product}',
 );
 
 Route::get('/login', [LoginController::class, 'show_login']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/register', [LoginController::class, 'show_register']);
+Route::post('/register', [LoginController::class, 'register']);
