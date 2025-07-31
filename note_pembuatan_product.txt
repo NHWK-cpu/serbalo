@@ -1,0 +1,3 @@
+$minuman = App\Models\Category::create(['name'=>'Makanan dan minuman', 'image_url'=>'icons/Makanan Ringan.png']);
+
+$minuman->product()->create(['name'=>'Air Mineral 600Ml', 'description' => 'Air mineral ukuran 600 ml', 'price' => 2000, 'stock' => 30, 'image_url' => 'icons/air600ml.webp', 'category_id' => $minuman->id]);

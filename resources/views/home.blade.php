@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth overscroll-none">
 
 <head>
 
@@ -37,15 +37,15 @@
 
       {{-- Categories --}}
       <div
-        class="w-4xl h-67 font-poppins overflow-x-scroll rounded-lg bg-white p-5 font-light shadow-[0_3px_3px_rgba(70,70,70,0.5)]">
-        <h2 class="font-poppins mb-3 text-xl font-semibold">Kategori Pilihan
-        </h2>
+        class="w-4xl h-75 font-poppins overflow-x-scroll rounded-lg p-5 font-light">
+        <a href="#categories" class="block w-fit"><h2 class="font-poppins text-white mb-3 text-xl font-semibold bg-purple-600 w-fit px-2 py-1 rounded-t-md rounded-b-xl border-2 border-black shadow-[4px_4px_0px_#000] hover:bg-purple-400 animate-bounce active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all">Kategori Pilihan
+        </h2></a>
         
-        <div class="flex h-[80%] w-full flex-row gap-3">
+        <div class="flex h-[80%] w-full flex-row gap-3" id="categories">
           @foreach ($categories as $category)
             <a class="block w-fit" href="">
               <div
-                class="w-35 h-full rounded-lg p-1 hover:bg-gray-100 shadow-[4px_4px_7px_#dadada] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
+                class="w-35 h-full rounded-lg p-1 bg-white hover:bg-gray-100 shadow-[4px_4px_7px_#dadada] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
                 <img class="w-full" src="{{ asset($category['image_url']) }}"
                   alt="">
                 <h3 class="w-full text-center capitalize">
@@ -68,7 +68,7 @@
               <a class="block w-fit" href="{{ '/item/'. $product['id'] }}" data-aos="zoom-in-up">
               <div
                 class="h-80 w-60 rounded-2xl border-2 p-2 shadow-[4px_4px_0_0_#000] transition-all hover:bg-gray-100 active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">
-                <img class="aspect-square w-full rounded-lg"
+                <img class="aspect-square w-full object-contain rounded-lg"
                   src="{{ asset($product['image_url']) }}" alt="" loading="lazy">
                   <p class="text-sm">Rp. {{ number_format($product['price'], 0, ',', '.') }}</p>
                 <h3 class="w-full font-sans text-lg"> {{ Str::limit( $product['name'] , 40, '...') }}

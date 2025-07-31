@@ -27,6 +27,13 @@ class User extends Authenticatable
     public function isAdmin() {
         return $this->is_admin;
     }
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
+
+    public function cart() {
+        return $this->hasOne(Cart::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

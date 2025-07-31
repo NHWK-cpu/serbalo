@@ -20,7 +20,7 @@
     <script>alert("{{ $message }}")</script>
   @enderror
   <div class="w-screen h-screen flex items-center justify-center">
-    <div class="w-md max-lg:w-sm py-15 px-10 bg-white space-y-5 rounded-xl border-2 border-black shadow-[4px_4px_0_0_#000]">
+    <div class="w-md max-lg:w-sm pt-15 pb-10 px-10 bg-white space-y-5 rounded-xl border-2 border-black shadow-[4px_4px_0_0_#000]">
       <h1 class="text-center text-xl font-bold font-poppins">Login Akun</h1>
 
       <form action="login" class="space-y-5" method="POST">
@@ -30,6 +30,7 @@
         <button type="submit" class="w-full py-2 bg-[#5000A6] text-white rounded-sm border-2 border-black shadow-[4px_4px_0_0_#000] transition-all hover:bg-[#a271bf] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none">Login</button>
       </form>
       <p class="font-poppins">Belum punya akun? <a href="/register" class="font-semibold italic">Buat Sekarang</a></p>
+      <div class="w-full text-xl mt-3"><a href="/" class="block hover:translate-x-[3px] hover:font-bold transition-all">&laquo; Back</a></div>
     </div>
   </div>
 </body>

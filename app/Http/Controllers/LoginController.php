@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,6 +44,8 @@ class LoginController extends Controller
 
         // Login otomatis setelah register
         auth()->login($user);
+
+        $cart = User::find(Auth::user()->id)->cart ?? Cart::create(['user_id' => Auth::user()->id]);
 
         return redirect('/')->with('message', 'Registrasi berhasil!');
     }
